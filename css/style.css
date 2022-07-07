@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 80%;
+}
+body{
+    font-family: cursive;
+    background-image: url(../360_F_271500423_Ls3YOwFx6DqHy4nUvAV2P0G2UQwFeQaq.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.startLayer{
+    background-color: rgba(173, 191, 214, 0.8); 
+    color: rgb(23, 23, 23);
+     position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.startLayer #stratBtn{
+    cursor: pointer;
+    padding: 15px 20px;
+    color: white;
+    background-image: linear-gradient(red, yellow);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: none;
+    border-radius: 20%;
+}
+
+
+
+.info_welcome{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+.wrong_try i ,
+.wrong_try span{
+    font-size: 40px;
+    color: red;
+}
+
+.Right_try i,
+.Right_try  span{
+    font-size: 40px;
+    color: white;
+}
+
+
+#btnNew{
+ padding: 15px;
+ background-color: aqua;
+ border: none;
+ cursor: pointer;
+ border-radius: 10%;
+
+}
+/* card_game */
+.card_game{
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.card{
+    height: 170px;
+    position: relative;
+    flex: 1 0 200px;
+    margin: 10px 15px;
+    transform-style: preserve-3d;
+    transition:transform .5s;
+    cursor: pointer;
+ 
+}
+.card_face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 30%;
+    backface-visibility: hidden;
+}
+.card_front::before{
+    content: '!';
+    font-size: 120px;
+    font-weight: bolder;  
+    color: white;
+
+} 
+
+.card_front{
+    line-height: 160px;
+    background-color: rgb(43, 24, 24);
+  
+}
+
+.card_back{
+    background-color: #d8dcd0;
+    transform: rotateY(180deg);
+
+}
+.card_back i{
+    font-size: 120px;
+    font-weight: bolder;  
+    line-height: 200px;
+}
+  
+.card.flibed,
+.card.match{
+    transform: rotateY(180deg);
+    pointer-events: none;
+}
+
+.card_game.noClick{
+
+  pointer-events: none;
+    
+}
